@@ -37,7 +37,7 @@ func InitPageData(w http.ResponseWriter, r *http.Request, active, path, title st
 	data := &types.PageData{
 		Meta: &types.Meta{
 			Title:       fullTitle,
-			Description: "Dora the Explorer makes the Ethereum Beacon Chain accessible to non-technical end users",
+			Description: "The Explorer makes the Canxium Hybrid Chain accessible to non-technical end users",
 			Domain:      siteDomain,
 			Path:        path,
 			Templates:   strings.Join(mainTemplates, ","),
