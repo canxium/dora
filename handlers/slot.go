@@ -613,7 +613,7 @@ func getSlotPageTransactions(pageData *models.SlotPageBlockData, tranactions []b
 
 		txHash := tx.Hash()
 		txValue, _ := tx.Value().Float64()
-		ethFloat, _ := utils.ETH.Float64()
+		ethFloat, _ := utils.CAU.Float64()
 		txValue = txValue / ethFloat
 
 		txData := &models.SlotPageTransaction{
