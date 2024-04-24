@@ -135,7 +135,7 @@ func buildIndexPageData() (*models.IndexPageData, time.Duration) {
 		for _, validator := range currentValidatorSet {
 			if strings.HasPrefix(validator.Status.String(), "active") {
 				pageData.ActiveValidatorCount++
-				pageData.TotalEligibleEther += uint64(validator.Validator.EffectiveBalance)
+				pageData.TotalEligibleEther += uint64(validator.Validator.EffectiveBalance) * 10
 				pageData.AverageValidatorBalance += uint64(validator.Balance)
 			}
 			if validator.Status == v1.ValidatorStatePendingQueued {
