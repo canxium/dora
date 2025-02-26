@@ -62,6 +62,8 @@ func IndexData(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "GET, POST, HEAD, OPTIONS")
 	err := json.NewEncoder(w).Encode(pageData)
 	if err != nil {
 		logrus.WithError(err).Error("error encoding index data")
